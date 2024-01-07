@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background: rgb(46, 180, 46);
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* ==================NAV===================== */
+nav {
+  padding: 1rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo {
+  width: 80px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 14px;
+}
+
+.team-link {
+  color: rgb(46, 180, 46);
+}
+
+.menu {
+  width: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+/* ==================MAIN===================== */
+/* ==================HERO===================== */
+
+.hero {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+.hero p {
+  width: 1000px;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+/* ==================TEAM===================== */
+.team-wraps {
+  padding-bottom: 4rem;
+}
+.team {
+  position: relative;
+}
+.team-img {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.team-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.our-team {
+  padding: 1.5rem;
+  background: #fff;
+  text-align: center;
+  width: 600px;
+  color: #333;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.our-team h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.our-team p {
+  line-height: 25px;
+  margin-bottom: 1.5rem;
+}
+
+/* ==================RANKS===================== */
+.ranks {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.ranks h3 {
+  font-size: 1.5rem;
+  color: #333;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.ranks h3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 3px;
+  bottom: -10px;
+  background: rgb(46, 180, 46);
+}
+
+.layout {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.top-layout,
+.bottom-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info {
+  margin-top: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.name {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.position {
+  color: rgb(46, 180, 46);
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    width: 900px;
+  }
+
+  .our-team {
+    top: 75%;
+  }
+
+  .our-team p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  .nav-links {
+    font-size: 12px;
+  }
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  .hero p {
+    width: 600px;
+    font-size: 13px;
+  }
+
+  .our-team {
+    position: unset;
+    width: 500px;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 0 auto;
+  }
+
+  .our-team h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .our-team p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .ranks h3 {
+    font-size: 1rem;
+  }
+
+  .top-layout,
+  .bottom-layout {
+    gap: 2rem;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  .position {
+    font-size: 13px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 475px) {
+  nav {
+    padding: 1rem;
+  }
+  nav .logo {
+    width: 60px;
+  }
+  .menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+font-size: 1.2rem;
+  }
+  .hero p {
+    width: 100%;
+    padding-inline: 1rem;
+    margin-top: 0.7rem;
+  }
+
+  .our-team {
+    width: 100%;
+  }
+
+  .ranks{
+    margin-top: 2rem;
+  }
+
+  .ranks h3 {
+margin-bottom: 1rem;
+  }
+
+  .layout {
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+
+  .top-layout,
+  .bottom-layout {
+    gap: 1rem;
+  }
+
+  .profile-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+
+  .position {
+    font-size: 11px;
+  }
+}
